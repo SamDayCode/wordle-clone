@@ -1,5 +1,5 @@
 # wordle-clone
-Creating a wordle clone in python
+Creating a wordle clone in Python
 
 This code is a clone of "Wordle" the popular web game updated each day by The New York Times.
 Credit to the original can be found here: https://www.nytimes.com/games/wordle/index.html.
