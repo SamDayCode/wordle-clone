@@ -26,7 +26,7 @@ target_word = target_word_list[random_integer]
 
 attempt_counter = int(6) #6 attempts to guess the correct word
 
-def comparewords(correct_word, guess_word):
+'''def comparewords(correct_word, guess_word):
     guess_word_letter1 = "-"
     guess_word_letter2 = "-"
     guess_word_letter3 = "-"
@@ -58,19 +58,24 @@ def comparewords(correct_word, guess_word):
     if guess_word[4] == correct_word[4]:
         guess_word_letter5 = "X"
 
-    score_answer = guess_word_letter1,guess_word_letter2,guess_word_letter3,guess_word_letter4,guess_word_letter5
-    return score_answer
+    score_answer = guess_word_letter1 + guess_word_letter2 + guess_word_letter3 + guess_word_letter4 + guess_word_letter5
+    return score_answer'''
 
 
 ##Gamestart##
-print("A random 6-Letter word has now been chosen. You have", attempt_counter, " attempts remaining (Real words only!). \n Goodluck!")
+print("A random 5-Letter word has now been chosen. You have", attempt_counter, "attempts remaining (Real words only!). \nGoodluck!")
 
 while attempt_counter > 0:
     player_guess = input("Your Guess:")
     if player_guess.lower() in all_word_list:
         score = comparewords(target_word, player_guess.lower())
         print(score)
+        if score == "XXXXX":
+            print("Well done, you won!")  #add here input to ask to replay later
+            attempt_counter = 0
+            break
         attempt_counter = attempt_counter - 1
+        print("\nYou have",attempt_counter,"attempts left!")
 
     else:
         print("Invalid Guess - Try again")

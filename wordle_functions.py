@@ -46,5 +46,5 @@ def comparewords(correct_word, guess_word):
     if guess_word[4] == correct_word[4]:
         guess_word_letter5 = "X"
 
-    score_answer = guess_word_letter1,guess_word_letter2,guess_word_letter3,guess_word_letter4,guess_word_letter5
+    score_answer = guess_word_letter1 + guess_word_letter2 + guess_word_letter3 + guess_word_letter4 + guess_word_letter5
     return score_answer
